@@ -1,6 +1,7 @@
-package pages;
+package pages.retail;
 
 import com.sun.xml.internal.rngom.parse.host.Base;
+import global.Utils;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.pagefactory.AndroidFindBy;

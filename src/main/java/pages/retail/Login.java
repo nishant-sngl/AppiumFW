@@ -1,15 +1,12 @@
-package pages;
+package pages.retail;
 
 import com.sun.xml.internal.rngom.parse.host.Base;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
-import io.appium.java_client.pagefactory.WindowsFindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.WebDriverWait;
-
-import java.util.List;
 
 public class Login extends Base {
     private AppiumDriver<MobileElement> driver;

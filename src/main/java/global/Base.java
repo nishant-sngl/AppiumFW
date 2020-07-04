@@ -1,3 +1,5 @@
+package global;
+
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
@@ -8,6 +10,7 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 
 import java.io.File;
 import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
@@ -15,20 +18,25 @@ import java.util.Properties;
 
 public class Base {
 
-    public static Properties prop;
     public static AppiumDriverLocalService service;
+    public static Properties properties;
 
-    public Base() throws IOException {
-        if (prop!=null) init();
+    public Base(){
+        FileInputStream fis = null;
+        try {
+            fis = new FileInputStream(System.getProperty("user.dir") + "/src/main/java/configs/config.properties");
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+        properties = new Properties();
+        try {
+            properties.load(fis);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
-    public static void init() throws IOException {
-        prop = new Properties();
-        FileInputStream fis = new FileInputStream("/Users/nishantsinghal/git/appium2/src/main/java/config.properties");
-        prop.load(fis);
-    }
-
-    public static  AppiumDriver<MobileElement> capabilities(String apk, String emulator) throws MalformedURLException
+    public static  AppiumDriver<MobileElement> capabilities(String apk, String emulator) throws IOException
     {
         AppiumDriver<MobileElement> driver;
 

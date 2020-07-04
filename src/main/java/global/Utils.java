@@ -1,4 +1,4 @@
-package pages;
+package global;
 
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
@@ -10,7 +10,7 @@ import io.appium.java_client.touch.offset.ElementOption;
 public class Utils {
     AppiumDriver<MobileElement> driver;
 
-    Utils(AppiumDriver<MobileElement> driver){
+    public Utils(AppiumDriver<MobileElement> driver){
         this.driver = driver;
     }
 

@@ -43,6 +43,12 @@
             <scope>compile</scope>
         </dependency>
 
+        <dependency>
+            <groupId>com.aventstack</groupId>
+            <artifactId>extentreports</artifactId>
+            <version>4.0.0</version>
+        </dependency>
+
     </dependencies>
 
 

@@ -1,4 +1,4 @@
-package pages;
+package pages.retail;
 
 import com.sun.xml.internal.rngom.parse.host.Base;
 import io.appium.java_client.AppiumDriver;
@@ -9,7 +9,6 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.List;
-import java.util.Properties;
 
 public class ProductList extends Base {
 
